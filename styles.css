@@ -1,0 +1,120 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --blue-shade: rgba(84, 158, 242, 0.1);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  width: 100dvw;
+  height: 100dvh;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 80%;
+  max-width: 50rem;
+  text-align: center;
+  margin: 5rem 0 2.5rem 0;
+}
+main {
+  margin: 2.5rem 0;
+  display: grid;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4";
+  align-content: center;
+  justify-items: center;
+  gap: 2.5rem;
+}
+h1 {
+  font-size: 2.4rem;
+  color: var(--very-dark-blue);
+  font-weight: 200;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--very-dark-blue);
+  font-weight: 600;
+}
+h3 {
+  font-size: 2.2rem;
+  color: var(--very-dark-blue);
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--grayish-blue);
+  margin: 1rem 0;
+}
+
+.card {
+  width: 88%;
+  background-color: white;
+  max-width: 35rem;
+  box-shadow: -1px 10px 8px 0px var(--blue-shade);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  position: relative;
+}
+.card > p {
+  font-size: 1.3rem;
+}
+.card > img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+}
+.c1 {
+  border-top: 0.4rem solid var(--cyan);
+  grid-area: c1;
+}
+.c2 {
+  border-top: 0.4rem solid var(--red);
+  grid-area: c2;
+}
+.c3 {
+  border-top: 0.4rem solid var(--orange);
+  grid-area: c3;
+}
+.c4 {
+  border-top: 0.4rem solid var(--blue);
+  grid-area: c4;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-areas:
+      "c1 c2 c4"
+      "c1 c3 c4";
+    align-items: center;
+  }
+}
